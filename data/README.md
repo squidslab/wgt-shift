@@ -27,3 +27,4 @@ This folder contains all the data used in the study.
 6. Additional data
     * **[`taxonomy_report.xlsx`](./taxonomy_report.xlsx)**: For each motivation category provides the number of adoption/migration issues/commits associated with it.
     * **[`mapping.xlsx`](./mapping.xlsx)**: Mapping between each issue/commit to the corresponding motivation category.
+    * An extended version of the original E2EGit dataset, enriched with adoption/migration events and relevant messages, is available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19741374.svg)](https://doi.org/10.5281/zenodo.19741374)
