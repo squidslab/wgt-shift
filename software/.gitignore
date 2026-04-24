@@ -1,0 +1,18 @@
+.idea/
+*.env
+.venv/
+__pycache__/
+~
+*#
+# *.csv
+*.log
+# *.xlsx
+*.png
+*.db
+*.db-journal
+# *.json
+*.svg
+*.pyc
+resources/*.db
+resources/all_issues/
+resources/clone/
