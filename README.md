@@ -4,6 +4,8 @@
 
 This repository contains the replication package of the paper "Exploring the Socio-Technical Motivations Behind the Adoption and Migration of Web GUI Testing Frameworks".
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19741374.svg)](https://doi.org/10.5281/zenodo.19741374)
+
 ## 📄 Abstract
 Web Graphical User Interface (GUI) testing frameworks such as Selenium or
 Playwright are widely used to automate end-to-end testing of modern web
