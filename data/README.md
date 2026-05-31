@@ -21,10 +21,10 @@ This folder contains all the data used in the study.
     * **[`issues_missed_in_filter.xlsx`](./issues_missed_in_filter.xlsx)**: List of issues that were missed by the filtering process classified as useful or not useful during manual review.
 
 5. Manual review results
-    * **[`taxonomy.xlsx`](./taxonomy.xlsx)**: Contains the final socio-technical taxonomy of motivations derived from the study.
+    * **[`thematic_categorization.xlsx`](./thematic_categorization.xlsx)**: Contains the final socio-technical thematic categorization of motivations derived from the study.
     * **[`events.xlsx`](./events.xlsx)**, **[`transitions.csv`](./transitions.csv)**: Both files contain the adoption and migration events, linking to their commit/issue and the corresponding motivation category. The latter provides also a plain text summary of each event.
 
 6. Additional data
-    * **[`taxonomy_report.xlsx`](./taxonomy_report.xlsx)**: For each motivation category provides the number of adoption/migration issues/commits associated with it.
+    * **[`thematic_categorization_report.xlsx`](./thematic_categorization_report.xlsx)**: For each motivation category provides the number of adoption/migration issues/commits associated with it.
     * **[`mapping.xlsx`](./mapping.xlsx)**: Mapping between each issue/commit to the corresponding motivation category.
     * An extended version of the original E2EGit dataset, enriched with adoption/migration events and relevant messages, is available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19741374.svg)](https://doi.org/10.5281/zenodo.19741374)

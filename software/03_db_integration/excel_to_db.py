@@ -3,7 +3,7 @@ from core.Dataset.Repository import RepositoryModel, NonTrivialRepo, GUITestingT
 from core.Dataset.Commit import CommitModel
 from core.Dataset.Issue import IssueModel
 from core.Dataset.Transition import TransitionModel
-from core.Dataset.Taxonomy import TaxonomyModel
+from core.Dataset.ThematicCategorization import ThematicCategorizationModel
 from core.config import RESOURCES_DIR
 from sqlalchemy.orm import sessionmaker
 
@@ -23,12 +23,12 @@ class ExcelToDBConverter():
         Session = sessionmaker(bind=engine)
         self.session = Session()
 
-    def insert_taxonomy_data(self):
-        df = pd.read_excel(RESOURCES_DIR / 'taxonomy.xlsx')
+    def insert_thematic_categorization_data(self):
+        df = pd.read_excel(RESOURCES_DIR / 'thematic_categorization.xlsx')
 
         for _, row in df.iterrows():
-            taxonomy = TaxonomyModel(category=row['category'], description=row['description'])
-            self.session.add(taxonomy)
+            thematic_categorization = ThematicCategorizationModel(category=row['category'], description=row['description'])
+            self.session.add(thematic_categorization)
         self.session.commit()
 
     def insert_commits(self, file_name):
@@ -101,13 +101,13 @@ class ExcelToDBConverter():
                 self.session.add(transition)
 
                 for category in row['categories'].split(','):
-                    taxonomy = self.session.query(TaxonomyModel).filter(
-                        TaxonomyModel.category.ilike(category.strip())
+                    thematic_categorization = self.session.query(ThematicCategorizationModel).filter(
+                        ThematicCategorizationModel.category.ilike(category.strip())
                     ).first()
-                    if taxonomy:
-                        transition.taxonomies.append(taxonomy)
+                    if thematic_categorization:
+                        transition.thematic_categorizations.append(thematic_categorization)
                     else:
-                        print(f"Taxonomy {category.strip()} not found in the database. Skipping.")
+                        print(f"Thematic categorization {category.strip()} not found in the database. Skipping.")
                 
                 if pd.notna(row['commits']):
                     for commit_hash in row['commits'].split(','):

@@ -16,7 +16,7 @@ from core.config import RESOURCES_DIR
 def check_required_files():
     """Check if all required Excel files exist."""
     required_files = [
-        'taxonomy.xlsx',
+        'thematic_categorization.xlsx',
         'adoption_commits_filtered.xlsx',
         'migration_commits_filtered.xlsx',
         'adoption_issues_filtered.xlsx',
@@ -51,9 +51,9 @@ def main():
     
     converter = ExcelToDBConverter()
 
-    print("\n[1/4] Inserting taxonomy data...")
-    converter.insert_taxonomy_data()
-    print("✓ Taxonomy data inserted successfully.")
+    print("\n[1/4] Inserting thematic categorization data...")
+    converter.insert_thematic_categorization_data()
+    print("✓ Thematic categorization data inserted successfully.")
     
     print("\n[2/4] Inserting commits...")
     converter.insert_commits("adoption_commits_filtered.xlsx")

@@ -9,11 +9,11 @@ The project implements a systematic workflow to investigate the motivations behi
 This software was designed to enrich [E2EGit dataset](https://zenodo.org/records/14988988) with qualitative insights on *why* projects choose to adopt or migrate between web testing frameworks.
 Starting from a set of manually identified adoption and migration events (provided as input Excel files), the framework automates the retrieval of historical context to reconstruct the decision-making process.
 
-The methodology, described in the thesis, follows a mixed-methods approach:
+The methodology, described in the paper, follows a mixed-methods approach:
 1.  **Automated Context Extraction**: Retrieving specific commit sequences and issue discussions surrounding the known transition dates.
-2.  **Noise Reduction**: Applying a specialized keyword-based taxonomy to filter relevant content.
+2.  **Noise Reduction**: Applying a specialized keyword-based approach to filter relevant content.
 3.  **Manual Classification**: Classifying the motivations through a custom "Human-in-the-loop" GUI.
-4.  **Taxonomic Analysis**: Categorizing the rationale (e.g., Developer Experience & Usability, Performance & Efficiency) to characterize the transition landscape.
+4.  **Thematic Categorization Analysis**: Categorizing the rationale (e.g., Developer Experience & Usability, Performance & Efficiency) to characterize the transition landscape.
 
 ## 📂 Project Structure
 
@@ -105,7 +105,7 @@ python -m 02_manual_labeling.cli --task server --target issue --type migration
 ```
 
 ### 4. Data Refinement
-After manual review define the taxonomic labels in the Excel files and create a new Excel file containing transition events linked to their motivations and associated issue number/commit hash. You can find the files we used for the study in the [``data``](./../data) folder.
+After manual review define the thematic categorization labels in the Excel files and create a new Excel file containing transition events linked to their motivations and associated issue number/commit hash. You can find the files we used for the study in the [``data``](./../data) folder.
 
 ### 5. Database Integration
 Integrate the classified data back into the E2EGit dataset SQLite database.
